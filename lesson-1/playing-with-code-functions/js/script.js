@@ -151,5 +151,12 @@ if(pencile === "pen") {
 //pencile()
 
 
+logWord()
+function logWord() {
+    console.log("tesla")
+
+}
+
+
 
 
