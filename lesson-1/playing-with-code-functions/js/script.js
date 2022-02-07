@@ -92,6 +92,64 @@ function isColor() {
 }
 isColor()
 
+//block scoupe
+
+{
+    const name = "isac";
+    const age = 19;
+console.log(name)
+
+}
+console.log(name);
+
+
+{
+    let age = 19;
+    const name = "isac";
+    var car = "tesla";
+    let drink = "redbull"
+    var food = "baguett"
+ console.log(age);
+ console.log(name)
+ console.log(car)
+ console.log(drink)
+ console.log(food)
+}
+
+
+//exapels 
+
+const myObject = {
+    number: 10,
+    myFunction: function() {
+        console.log(this.number)
+    } 
+}
+myObject.myFunction()
+
+//more examples in class
+
+const pet = "rhino";
+let isDangerous;
+if(pet === "rhino") {
+    isDangerous = true;
+}
+else {
+    isDangerous = false;
+}
+isDangerous = pet === "rhino";
+//isDangerous ? pet === "rhino" ? true : false
+ //const isDangerous = pet === "rhino" ? true : false,
+
+const pencile = "pen";
+let dangerous;
+if(pencile === "pen") {
+    dangerous = true;
+} else {
+    dangerous = false;
+}
+//pencile()
+
 
 
 
