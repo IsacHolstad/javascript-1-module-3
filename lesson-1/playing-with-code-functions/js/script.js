@@ -156,6 +156,24 @@ function logWord() {
     console.log("tesla")
 
 }
+const DiffrentCars = [
+    {
+        brand: "TESLA",
+        model: "model s",
+        year: 2018
+    },
+    {
+        brand: "BMW",
+        model: "330 e",
+        year: 2016
+    },
+    {
+        brand: "TESLA",
+        model: "model x",
+        year: 2021
+    }
+];
+console.log(DiffrentCars)
 
 
 
