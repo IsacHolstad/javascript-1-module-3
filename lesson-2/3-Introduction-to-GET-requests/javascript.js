@@ -6,6 +6,9 @@ fetch(URL) //Promise<Response>
 .then((response) => response.json()) //Promise<any>
 .then((data) => { 
 console.log(data.data)
+factsContainr.innerHTML = "";
+
+
 const myCatFactsArray = data.data;
 for (let i = 0; i < myCatFactsArray.length; i++) {
     console.log(myCatFactsArray[i].fact);
@@ -16,7 +19,12 @@ for (let i = 0; i < myCatFactsArray.length; i++) {
 }
 });
 
+
+
 //.catch((error) => {
    // console.log(error)
 //})
 //Promise<any>
+
+//this you can have before beacuse the lsit takes litttle time to load "factsContainr.innerHTML = """ "
+//you dont need the settimeout beacuse it is inside the ul.
