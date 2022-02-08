@@ -35,7 +35,7 @@ console.log("ice cream")
 setTimeout(() => {
     console.log("love")
     
-}, 1000 );
+}, 10000 );
 
 function printMessage(message) {
     //i wnat to check if there is a message 
@@ -68,3 +68,6 @@ console.log("totalsum: " + totalSum)
 
 const totalsum = getSum()
 console.log(totalSum);
+
+
+
