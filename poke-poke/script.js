@@ -1,45 +1,43 @@
-//endpoint
-//https://pokeapi.co/api/v2/{endpoint}/
+// MY POINT
+// https://pokeapi.co/api/v2/pokemon?offset=20&limit=40
 const APIUrl = "https://pokeapi.co/api/v2/pokemon?offset=20&limit=40";
-//select hte pokemon class
-const pokemonsContainer = document.querySelector(".pokemons");
 
-//async example 9.feb 14:00
-//async function getPokemonNames(){
-
-    //try{
-// Let's create a fake problem
-      //  await abc;
-    //}
-
-    //catch(error){
-       // console.log("abc does not exist", error)
-   // }
-//}
-
-//getPokemonNames();  // run the code
+// Select the Pokémon class container
+const pokemonsContainer = document.querySelector(".pokemons"); // ul with class pokemons
+//
+// async function kitchen(){
+//
+//     try{
+// // Let's create a fake problem
+//         await abc;
+//     }
+//
+//     catch(error){
+//         console.log("abc does not exist", error)
+//     }
+// }
+//
+// kitchen();  // run the code
+//
 
 async function getPokemonNames() {
-    
     try {
         const response = await fetch(APIUrl);
-        const responseJSON = await response.json();
-         console.log(responseJSON);
-         const pokemonData = responseJSON.results;
-         console.log(pokemonData);
-         for(let i = 0; i < pokemonData.length; i++);
-         console.log(pokemonData[i]);
-         pokemonData.innerHTML = `<li><span>${pokemonData[i].name}</span></li>`
+        // console.log(response);
+        const responseJSON = await response.json(); // convert the response to json data
+        console.log(responseJSON);
+        const pokemonsData = responseJSON.results;
+        console.log(pokemonsData);
+        for (let i = 0; i < pokemonsData.length; i++) {
+            console.log(pokemonsData[i]);
+            pokemonsContainer.innerHTML += `<li><span>${pokemonsData[i].name}</span></li>`
+        }
 
-    }
-    
-    catch (error) {
-        console.log("some error happend", error);
-        pokemonData.innerHTML = `<li><span>sorry no data</span></li>`
-        
+    } catch (error) {
+        console.log("Some error happened :(", error);
+        pokemonsContainer.innerHTML = `<li><span>sorry some error happened :(</span></li>`
+
     }
 }
 
-
 getPokemonNames();
-//for(let i = 0; i < getPokemonNames.length; i++);
