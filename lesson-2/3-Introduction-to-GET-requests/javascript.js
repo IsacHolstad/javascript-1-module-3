@@ -28,3 +28,4 @@ for (let i = 0; i < myCatFactsArray.length; i++) {
 
 //this you can have before beacuse the lsit takes litttle time to load "factsContainr.innerHTML = """ "
 //you dont need the settimeout beacuse it is inside the ul.
+
