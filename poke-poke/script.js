@@ -24,12 +24,22 @@ async function getPokemonNames() {
     try {
         const response = await fetch(APIUrl);
         const responseJSON = await response.json();
-         console.log(responseJSON)
+         console.log(responseJSON);
+         const pokemonData = responseJSON.results;
+         console.log(pokemonData);
+         for(let i = 0; i < pokemonData.length; i++);
+         console.log(pokemonData[i]);
+         pokemonData.innerHTML = `<li><span>${pokemonData[i].name}</span></li>`
+
     }
+    
     catch (error) {
-        console.log("some error happend", error)
+        console.log("some error happend", error);
+        pokemonData.innerHTML = `<li><span>sorry no data</span></li>`
+        
     }
 }
 
 
 getPokemonNames();
+//for(let i = 0; i < getPokemonNames.length; i++);
