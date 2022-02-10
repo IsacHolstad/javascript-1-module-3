@@ -17,4 +17,7 @@ for (let i = 0; i < myCatFactsArray.length; i++) {
     }
     factsContainr.innerHTML += `<li>${myCatFactsArray[i].fact}</li>`
 }
+    catch((error) => {
+        factsContainr.innerHTML =  displayError("erooooorr")
+    });
 });
