@@ -22,7 +22,8 @@ async function getPokemonDetails() {
         const signelPokemonDetails = await response.json()
         console.log("singlePokemonDetails: ", singelPokemonDetails);
         const pokmonWeight = signelPokemonDetails.weihgt;
-        console.log(pokemonDetailsWeight)
+        console.log(pokemonDetailsWeight);
+        pokemonDetails.innerHTML = `<div>The Pokémon Weight Is : ${pokmonWeight}</div>`
     }
     catch (error){
         console.log(error)
