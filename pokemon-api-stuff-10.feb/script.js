@@ -30,7 +30,7 @@ async function getPokemonNames() {
         //console.log(pokemonsData);
         for (let i = 0; i < pokemonsData.length; i++) {
            // console.log(pokemonsData[i]);
-            pokemonsContainer.innerHTML += `<li><span>${pokemonsData[i].name}</span></li>`
+            pokemonsContainer.innerHTML += `<li><span><a href="index.html?name=${pokemonsData[i].name}">${pokemonsData[i].name}</a></span></li>`
         }
 
     } catch (error) {
