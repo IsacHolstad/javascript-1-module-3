@@ -1,11 +1,11 @@
 //example 1
-console.log(document.location);
+//console.log(document.location);
 
 //how to get the query param
 
 console.log(document.location.search)
 
-const queryString = document.location.search;
+//const queryString = document.location.search;
 //in order t oget the value
 const params = new URLSearchParams(queryString);
 console.log(params)
@@ -18,14 +18,33 @@ const mySchoolParams = params.get("school");
 //i want to chack this param is equal to noroff
 //okay thee param is noroff
 
-//else redircet to another page
+else redircet to another page
 
 if(params.has("school")) {
     console.log("i have the param")
 }
 else if(param.get("school")=== "noroff") {
-    console.log("okey the param is noroff")
+   console.log("okey the param is noroff")
 }
-else{
-    document.location.href = "second.html";
+//else{
+   // document.location.href = "second.html";
+//}
+//EXAMPLE-1
+console.log(document.location);
+
+console.log(document.location.search);
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+console.log(params)
+console.log(params.get("car"));
+const myCarParams = params.get("car")
+if(params.has("car")) {
+    console.log("i have the param")
 }
+else if(param.get("car") === "bmw") {
+    console.log("okey the param is bmw")
+}
+//else{
+   // document.location.href = "second.html"
+//}
+
