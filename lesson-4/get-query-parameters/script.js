@@ -18,7 +18,7 @@ const mySchoolParams = params.get("school");
 //i want to chack this param is equal to noroff
 //okay thee param is noroff
 
-else redircet to another page
+//else redircet to another page
 
 if(params.has("school")) {
     console.log("i have the param")
@@ -47,4 +47,8 @@ else if(param.get("car") === "bmw") {
 //else{
    // document.location.href = "second.html"
 //}
+
+console.log(document.search.location)
+
+console.log("helrlo");
 

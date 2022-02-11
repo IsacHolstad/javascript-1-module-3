@@ -41,13 +41,13 @@ const result = document.querySelector(".result")
 
     try{
         getSomething();
-        result.innerHTML = "SUCCESES"
+        //result.innerHTML = "SUCCESES"
     }
-    catch(error){
-        console.log("abc error does not exsist"),
-        result.innerHTML = "nah there is an error"
+   // catch(error){
+       // console.log("abc error does not exsist"),
+       // result.innerHTML = "nah there is an error"
         
-    }
+    //}
 
     finally{
         console.log("Runs code anyways")
@@ -56,5 +56,13 @@ const result = document.querySelector(".result")
 
 
  // run the code
+
+console.log("hhfe")
+
+let getRemainder = (a, b) => {
+    return a + b;
+}
+getRemainder()
+
 
 
