@@ -1,44 +1,46 @@
-//examples from presentasion 7.feb 13:50pm
-function someFunction() {
-    console.log("hello")
+// MY POINT
+// https://pokeapi.co/api/v2/pokemon?offset=20&limit=40
+const APIUrl = "https://pokeapi.co/api/v2/pokemon?offset=20&limit=40";
+
+// Select the Pokémon class container
+const pokemonsContainer = document.querySelector(".pokemons"); // ul with class pokemons
+//
+// async function kitchen(){
+//
+//     try{
+// // Let's create a fake problem
+//         await abc;
+//     }
+//
+//     catch(error){
+//         console.log("abc does not exist", error)
+//     }
+// }
+//
+// kitchen();  // run the code
+//
+
+async function getPokemonNames() {
+    try {
+        const response = await fetch(APIUrl);
+        // console.log(response);
+        const responseJSON = await response.json(); // convert the response to json data
+        console.log(responseJSON);
+        const pokemonsData = responseJSON.results;
+        console.log(pokemonsData);
+        for (let i = 0; i < pokemonsData.length; i++) {
+            console.log(pokemonsData[i]);
+            pokemonsContainer.innerHTML += <li><span>${pokemonsData[i].name}</span></li>
+        }
+
+    } catch (error) {
+        console.log("Some error happened :(", error);
+        pokemonsContainer.innerHTML = <li><span>sorry some error happened :(</span></li>
+
+    }
 }
-someFunction()
 
-
-
-
-const favoritPlace = "Fauske";
-    function showFavortPlace () {
-        console.log("favorit place is : " + favoritPlace)
-    }
-function isFavorit() {
-    if(favoritPlace === "Fauske") {
-        console.log(favoritPlace +" is my favorit place on earth")
-    }
-    else {
-        console.log("is not my favort place")
-    }
-}
-isFavorit()
-
-const favoritCar = "TESLA";
-function ShowFavoritCar () {
-    if(favoritCar === "TESLA") {
-        console.log(favoritCar +" is my favorit car")
-    }else{
-        console.log("is not my favorit car")
-    }
-}
-ShowFavoritCar()
-
-//logMessage()
-//function logMessage() {
-   // console.log("bruh automativ")
-//}
-
- 
-
-
+getPokemonNames();
 
 
 
