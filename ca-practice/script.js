@@ -1,3 +1,5 @@
+
+   
 // MY POINT
 // https://pokeapi.co/api/v2/pokemon?offset=20&limit=40
 const APIUrl = "https://pokeapi.co/api/v2/pokemon?offset=20&limit=40";
@@ -25,20 +27,19 @@ async function getPokemonNames() {
         const response = await fetch(APIUrl);
         // console.log(response);
         const responseJSON = await response.json(); // convert the response to json data
-        //console.log(responseJSON);
+        console.log(responseJSON);
         const pokemonsData = responseJSON.results;
-        //console.log(pokemonsData);
+        console.log(pokemonsData);
         for (let i = 0; i < pokemonsData.length; i++) {
-           // console.log(pokemonsData[i]);
-            pokemonsContainer.innerHTML += `<li><span><a href="index.html?name=${pokemonsData[i].name}">${pokemonsData[i].name}</a></span></li>`
+            console.log(pokemonsData[i]);
+            pokemonsContainer.innerHTML += `<li><span><a href="pokemon-detials.html?name=${pokemonsData[i].name}">${pokemonsData[i].name}</a></span></li>`
         }
 
     } catch (error) {
-       // console.log("Some error happened :(", error);
+        console.log("Some error happened: )", error);
         pokemonsContainer.innerHTML = `<li><span>sorry some error happened</span></li>`
 
     }
-    
 }
 
 getPokemonNames();

@@ -34,7 +34,7 @@ async function getPokemonNames() {
         }
 
     } catch (error) {
-        console.log("Some error happened :(", error);
+        console.log("Some error happened :", error);
         pokemonsContainer.innerHTML = `<li><span>sorry some error happened :(</span></li>`
 
     }
